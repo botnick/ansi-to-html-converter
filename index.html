@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANSI to HTML Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .output {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+      .ansi-code {
+        font-family: monospace;
+        background-color: #eee;
+        padding: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+      .footer {
+        margin-top: 40px;
+        font-size: 14px;
+        text-align: center;
+      }
+      .footer a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ANSI to HTML Example</h1>
+
+    <div>
+      <h2>Example 1: Red Text</h2>
+      <div class="ansi-code" id="ansi1"></div>
+      <div class="output" id="example1"></div>
+    </div>
+
+    <div>
+      <h2>Example 2: Green and Bold Text</h2>
+      <div class="ansi-code" id="ansi2"></div>
+      <div class="output" id="example2"></div>
+    </div>
+
+    <div>
+      <h2>Example 3: Underlined Text</h2>
+      <div class="ansi-code" id="ansi3"></div>
+      <div class="output" id="example3"></div>
+    </div>
+
+    <div>
+      <h2>Example 4: Italic Text</h2>
+      <div class="ansi-code" id="ansi4"></div>
+      <div class="output" id="example4"></div>
+    </div>
+
+    <div>
+      <h2>Example 5: Strikethrough Text</h2>
+      <div class="ansi-code" id="ansi5"></div>
+      <div class="output" id="example5"></div>
+    </div>
+
+    <div>
+      <h2>Example 6: Text with Red Background</h2>
+      <div class="ansi-code" id="ansi6"></div>
+      <div class="output" id="example6"></div>
+    </div>
+
+    <div>
+      <h2>Example 7: Red Text with Gray Background</h2>
+      <div class="ansi-code" id="ansi7"></div>
+      <div class="output" id="example7"></div>
+    </div>
+
+    <div>
+      <h2>Example 8: Red Text and Normal Text</h2>
+      <div class="ansi-code" id="ansi8"></div>
+      <div class="output" id="example8"></div>
+    </div>
+
+    <div class="footer">
+      Follow the project on
+      <a
+        href="https://github.com/botnick/ansi-to-html-converter"
+        target="_blank"
+        >GitHub</a
+      >.
+    </div>
+
+    <script src="ansiToHtml.js"></script>
+    <script>
+      const examples = [
+        {
+          text: "\x1b[31mRed text\x1b[0m",
+          elementId: "example1",
+          ansiElementId: "ansi1",
+        },
+        {
+          text: "\x1b[32m\x1b[1mGreen and bold text\x1b[0m",
+          elementId: "example2",
+          ansiElementId: "ansi2",
+        },
+        {
+          text: "\x1b[4mUnderlined text\x1b[0m",
+          elementId: "example3",
+          ansiElementId: "ansi3",
+        },
+        {
+          text: "\x1b[3mItalic text\x1b[0m",
+          elementId: "example4",
+          ansiElementId: "ansi4",
+        },
+        {
+          text: "\x1b[9mStrikethrough text\x1b[0m",
+          elementId: "example5",
+          ansiElementId: "ansi5",
+        },
+        {
+          text: "\x1b[41mText with red background\x1b[0m",
+          elementId: "example6",
+          ansiElementId: "ansi6",
+        },
+        {
+          text: "\x1b[31m\x1b[47mRed text with gray background\x1b[0m",
+          elementId: "example7",
+          ansiElementId: "ansi7",
+        },
+        {
+          text: "\x1b[31mRed text\x1b[0m and normal text",
+          elementId: "example8",
+          ansiElementId: "ansi8",
+        },
+      ];
+
+      examples.forEach((example) => {
+        const html = ansiToHtml(example.text);
+        document.getElementById(example.elementId).innerHTML = html;
+        document.getElementById(example.ansiElementId).textContent =
+          example.text;
+      });
+    </script>
+  </body>
+</html>
