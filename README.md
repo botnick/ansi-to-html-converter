@@ -98,14 +98,10 @@ Mix and match to your heart's content!
 
 If you're feeling generous and want to support this project, here are some crypto addresses:
 
-### USDT (TRC20)
-**Address**: `TSWKDdtY9jKnL8zbQfEb28mGHWdF2ZZfGq`
-### USDC (SOL)
-**Address**: `CDAzUsKtxiEvChE1Koqyvs3SEaEBmdXqNRcNmhntnm5Y`
-### Bitcoin (BTC)
-**Address**: `0xdc7abcf93ffbab185826b98f324c931b351b8d9d`
-### Ethereum (ETH)
-**Address**: `0xdc7abcf93ffbab185826b98f324c931b351b8d9d`
+- **USDT (TRC20)**: `TSWKDdtY9jKnL8zbQfEb28mGHWdF2ZZfGq`
+- **USDC (SOL)**: `CDAzUsKtxiEvChE1Koqyvs3SEaEBmdXqNRcNmhntnm5Y`
+- **Bitcoin (BTC)**: `0xdc7abcf93ffbab185826b98f324c931b351b8d9d`
+- **Ethereum (ETH)**: `0xdc7abcf93ffbab185826b98f324c931b351b8d9d`
 
 Every little bit helps keep the code flowing!
 
